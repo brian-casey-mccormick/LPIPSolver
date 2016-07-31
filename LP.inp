@@ -1,0 +1,215 @@
+#Problem 1
+problemIsTwoPhase = 0
+numConstraintEquations = 3
+numXiVariables = 5
+
+#Z    X1    X2    X3    X4    X5    RHS
+0     1     1     0     0     0     0     #original variables locations
+0     0     0     0     0     0     0     #artificial variable locations
+0     0     0     1     1     1     0     #slack variable locations
+0     0     0     0     0     0     0     #surplus variable locations
+0     0     0     0     0     0     0     #binary variable type locations
+0     0     0     0     0     0     0     #integer variable type locations
+
+1.0  -3.0  -5.0   0.0   0.0   0.0   0.0   #objective function
+0.0   1.0   0.0   1.0   0.0   0.0   4.0   #constraint 1 in standard form
+0.0   0.0   2.0   0.0   1.0   0.0  12.0   #constraint 2 in standard form
+0.0   3.0   2.0   0.0   0.0   1.0  18.0   #constraint 3 in standard form
+
+
+
+
+#Problem 2
+#problemIsTwoPhase = 1
+#numConstraintEquations = 3
+#numXiVariables = 5
+
+#Z    X1    X2    X3    X4    X5    RHS
+#0     1     1     0     0     0     0      #original variable locations
+#0     0     0     0     0     1     0      #artificial variable locations
+#0     0     0     1     1     0     0      #slack variable locations
+#0     0     0     0     0     0     0      #surplus variable locations
+#0     0     0     0     0     0     0      #binary variable type locations
+#0     0     0     0     0     0     0      #integer variable type locations
+
+#phase one data
+#1.0   0.0   0.0   0.0   0.0   1.0   0.0    #objective function for phase 1
+#0.0   1.0   0.0   1.0   0.0   0.0   4.0    #constraint 1 in standard form
+#0.0   0.0   2.0   0.0   1.0   0.0  12.0    #constraint 2 in standard form
+#0.0   3.0   2.0   0.0   0.0   1.0  18.0    #constraint 3 in standard form
+
+#phase two data
+#1.0  -3.0  -5.0   0.0   0.0   0.0   0.0    #objective function for phase 2
+
+
+
+
+#Problem 3
+#problemIsTwoPhase = 1
+#numConstraintEquations = 3
+#numXiVariables = 6
+
+#Z    X1    X2    X3    X4    X5    X6    RHS
+#0     1     1     0     0     0     0     0       #original variable locations
+#0     0     0     0     1     0     1     0       #artificial variable locations
+#0     0     0     1     0     0     0     0       #slack variable locations
+#0     0     0     0     0     1     0     0       #surplus variable locations
+#0     0     0     0     0     0     0     0       #binary variable type locations
+#0     0     0     0     0     0     0     0       #integer variable type locations
+
+#phase one data
+#-1.0   0.0   0.0   0.0   1.0   0.0   1.0   0.0    #objective function for phase 1
+# 0.0   0.3   0.1   1.0   0.0   0.0   0.0   2.7    #constraint 1 in standard form
+# 0.0   0.5   0.5   0.0   1.0   0.0   0.0   6.0    #constraint 2 in standard form
+# 0.0   0.6   0.4   0.0   0.0  -1.0   1.0   6.0    #constraint 3 in standard form
+
+#phase two data
+#-1.0   0.4   0.5   0.0   0.0   0.0   0.0   0.0     #objective function for phase 2
+
+
+
+
+#Problem 4, Problem Type is PURE_BIP
+#problemIsTwoPhase = 0
+#numConstraintEquations = 8
+#numXiVariables = 12
+
+#Z    X1    X2    X3    X4    X5    X6    X7    X8    X9    X10   X11    X12    RHS
+#0      1     1     1     1     0     0     0     0     0     0     0      0      0    #original variable locations
+#0      0     0     0     0     0     0     0     0     0     0     0      0      0    #artificial variable locations
+#0      0     0     0     0     1     1     1     1     1     1     1      1      0    #slack variable locations
+#0      0     0     0     0     0     0     0     0     0     0     0      0      0    #surplus variable locations
+#0      1     1     1     1     0     0     0     0     0     0     0      0      0    #binary variable type locations
+#0      0     0     0     0     0     0     0     0     0     0     0      0      0    #integer variable type locations
+
+#1.0  -9.0  -5.0  -6.0  -4.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0    0.0    0.0   #objective function
+#0.0   6.0   3.0   5.0   2.0   1.0   0.0   0.0   0.0   0.0   0.0   0.0    0.0   10.0   #constraint 1 in standard form
+#0.0   0.0   0.0   1.0   1.0   0.0   1.0   0.0   0.0   0.0   0.0   0.0    0.0    1.0   #constraint 2 in standard form
+#0.0  -1.0   0.0   1.0   0.0   0.0   0.0   1.0   0.0   0.0   0.0   0.0    0.0    0.0   #constraint 3 in standard form
+#0.0   0.0  -1.0   0.0   1.0   0.0   0.0   0.0   1.0   0.0   0.0   0.0    0.0    0.0   #constraint 4 in standard form
+#0.0   1.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   1.0   0.0   0.0    0.0    1.0   #constraint 5 in standard form
+#0.0   0.0   1.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   1.0   0.0    0.0    1.0   #constraint 6 in standard form
+#0.0   0.0   0.0   1.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   1.0    0.0    1.0   #constraint 7 in standard form
+#0.0   0.0   0.0   0.0   1.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0    1.0    1.0   #constraint 8 in standard form
+
+
+
+
+#Problem 5, Problem Type is MIXED_IP
+#problemIsTwoPhase = 0
+#numConstraintEquations = 4
+#numXiVariables = 8
+
+#Z    X1    X2    X3    X4    X5    X6    X7    X8    RHS
+#0     1     1     1     1     0     0     0     0     0     #original variable locations
+#0     0     0     0     0     0     0     0     0     0     #artificial variable locations
+#0     0     0     0     0     1     1     1     1     0     #slack variable locations
+#0     0     0     0     0     0     0     0     0     0     #surplus variable locations
+#0     0     0     0     0     0     0     0     0     0     #binary variable type locations
+#0     1     1     1     0     0     0     0     0     0     #integer variable type locations
+
+#1.0  -4.0   2.0  -7.0   1.0   0.0   0.0   0.0   0.0   0.0    #objective function
+#0.0   1.0   0.0   5.0   0.0   1.0   0.0   0.0   0.0  10.0    #constraint 1 in standard form
+#0.0   1.0   1.0  -1.0   0.0   0.0   1.0   0.0   0.0   1.0    #constraint 2 in standard form
+#0.0   6.0  -5.0   0.0   0.0   0.0   0.0   1.0   0.0   0.0    #constraint 3 in standard form
+#0.0  -1.0   0.0   2.0  -2.0   0.0   0.0   0.0   1.0   3.0    #constraint 4 in standard form
+
+
+
+
+#Problem 6, Problem Type is PURE_BIP and Two Phase
+#problemIsTwoPhase = 1
+#numConstraintEquations = 4
+#numXiVariables = 7
+
+#Z    X1    X2    X3    X4    X5     X6    X7    RHS
+#0     1     1     0     0     0      0     0     0    #original variable locations
+#0     0     0     0     1     0      0     0     0    #artificial variable locations
+#0     0     0     0     0     1      1     1     0    #slack variable locations
+#0     0     0     1     0     0      0     0     0    #surplus variable locations
+#0     1     1     0     0     0      0     0     0    #binary variable type locations
+#0     0     0     0     0     0      0     0     0    #integer variable type locations
+
+#phase one data
+#1.0   0.0   0.0   0.0   1.0   0.0    0.0   0.0   0.0   #objective function for phase 1
+#0.0   1.0   1.0  -1.0   1.0   0.0    0.0   0.0   0.5   #constraint 1 in standard form
+#0.0   1.0   1.0   0.0   0.0   1.0    0.0   0.0   1.5   #constraint 2 in standard form
+#0.0   1.0   0.0   0.0   0.0   0.0    1.0   0.0   1.0   #constraint 3 in standard form
+#0.0   0.0   1.0   0.0   0.0   0.0    0.0   1.0   1.0   #constraint 4 in standard form
+
+#phase two data
+#1.0   0.0  -1.0   0.0   0.0   0.0    0.0   0.0   0.0   #objective function for phase 2
+
+
+
+
+#Problem 7, Problem Type is PURE_BIP and Two Phase
+problemIsTwoPhase = 0
+numConstraintEquations = 4
+numXiVariables = 6
+
+#Z     X1    X2    X3    X4    X5    X6     RHS
+0      1     1     0     0     0     0      0    #original variable locations
+0      0     0     0     0     0     0      0    #artificial variable locations
+0      0     0     1     1     1     1      0    #slack variable locations
+0      0     0     0     0     0     0      0    #surplus variable locations
+0      1     1     0     0     0     0      0    #binary variable type locations
+0      0     0     0     0     0     0      0    #integer variable type locations
+
+#phase one data
+1.0  -2.0  -5.0   0.0   0.0   0.0   0.0    0.0   #objective function
+0.0  10.0  30.0   1.0   0.0   0.0   0.0   30.0   #constraint 1 in standard form
+0.0  95.0 -30.0   0.0   1.0   0.0   0.0   75.0   #constraint 2 in standard form
+0.0   1.0   0.0   0.0   0.0   1.0   0.0    1.0   #constraint 3 in standard form
+0.0   0.0   1.0   0.0   0.0   0.0   1.0    1.0   #constraint 4 in standard form
+
+
+
+
+#Problem 8, Problem Type is PURE_IP and Two Phase
+#problemIsTwoPhase = 1
+#numConstraintEquations = 3
+#numXiVariables = 6
+
+#Z    X1    X2    X3    X4    X5    X6    RHS
+#0     1     1     0     0     0     0     0     #original variable locations
+#0     0     0     0     1     0     0     0     #artificial variable locations
+#0     0     0     0     0     1     1     0     #slack variable locations
+#0     0     0     1     0     0     0     0     #surplus variable locations
+#0     0     0     0     0     0     0     0     #binary variable type locations
+#0     1     1     0     0     0     0     0     #integer variable type locations
+
+#1.0   0.0   0.0   0.0   1.0   0.0   0.0   0.0    #first phase objective function
+#0.0   5.0  -7.0  -1.0   1.0   0.0   0.0   3.0    #constraint 1 in standard form
+#0.0   1.0   0.0   0.0   0.0   1.0   0.0   3.0    #constraint 2 in standard form
+#0.0   0.0   1.0   0.0   0.0   0.0   1.0   3.0    #constraint 3 in standard form
+
+#1.0   3.0  -5.0   0.0   0.0   0.0   0.0   0.0    #second phase objective function
+
+
+
+
+#problemIsTwoPhase = 1
+#numConstraintEquations = 10
+#numXiVariables = 16
+
+#0     1     1     1     1     1     1     0     0     0     0     0     0     0     0     0     0     0
+#0     0     0     0     0     1     0     1     1     1     1     0     0     0     0     0     0     0
+#0     0     0     1     1     0     0     0     0     0     0     1     1     1     1     1     1     0
+#0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+#0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+#0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+
+#-1.0  0.0   0.0   0.0   0.0   0.0   0.0   1.0   1.0   1.0   1.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0    
+#0.0   1.0   1.0   1.0   0.0   0.0   0.0   1.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   2.0
+#0.0   1.0   0.0   0.0   1.0   1.0   0.0   0.0   1.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   2.0
+#0.0   0.0   1.0   0.0   1.0   0.0   1.0   0.0   0.0   1.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   2.0
+#0.0   0.0   0.0   1.0   0.0   1.0   1.0   0.0   0.0   0.0   1.0   0.0   0.0   0.0   0.0   0.0   0.0   2.0
+#0.0   1.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   1.0   0.0   0.0   0.0   0.0   0.0   1.0
+#0.0   0.0   1.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   1.0   0.0   0.0   0.0   0.0   1.0
+#0.0   0.0   0.0   1.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   1.0   0.0   0.0   0.0   1.0
+#0.0   0.0   0.0   0.0   1.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   1.0   0.0   0.0   1.0
+#0.0   0.0   0.0   0.0   0.0   1.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   1.0   0.0   1.0
+#0.0   0.0   0.0   0.0   0.0   0.0   1.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   1.0   1.0
+
+-1.0  1.0   2.0   2.0   2.0   2.0   1.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0
